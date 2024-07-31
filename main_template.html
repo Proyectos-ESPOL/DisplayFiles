@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ruteo Vehicular</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+			<p class='texto'>
+				Asignación <a class='colorful' href='#'>AUTOMATIZADA</a> de rutas
+    </p>
+				<div class='wrapper'>
+
+<!-- Empiezan la carta -->
+<div class="card" id="carta1">
+  <div class="card-inner">
+    <div class="card-front">
+			<p>1</p>
+    </div>
+    <div class="card-back">
+			<div class="scroll-container">
+				{% for dia in equipo1 %}
+				<a href={{ dia.path }}><div class="scroll-page">{{dia.text }}</div></a>
+				{% endfor %}
+	</div></div></div></div>
+<!-- Termina la carta -->
+
+
+<!-- Empiezan la carta -->
+<div class="card" id="carta2">
+  <div class="card-inner">
+    <div class="card-front">
+			<p>2</p>
+    </div>
+    <div class="card-back">
+			<div class="scroll-container">
+				{% for dia in equipo2 %}
+				<a href={{ dia.path }}><div class="scroll-page">{{dia.text }}</div></a>
+				{% endfor %}
+	</div></div></div></div>
+<!-- Termina la carta -->
+
+
+<!-- Empiezan la carta -->
+<div class="card" id="carta3">
+  <div class="card-inner">
+    <div class="card-front">
+			<p>3</p>
+    </div>
+    <div class="card-back">
+			<div class="scroll-container">
+				{% for dia in equipo3 %}
+				<a href={{ dia.path }}><div class="scroll-page">{{dia.text }}</div></a>
+				{% endfor %}
+	</div></div></div></div>
+<!-- Termina la carta -->
+
+
+<!-- Empiezan la carta -->
+<div class="card" id="carta4">
+  <div class="card-inner">
+    <div class="card-front">
+			<p>4</p>
+    </div>
+    <div class="card-back">
+			<div class="scroll-container">
+				{% for dia in equipo4 %}
+				<a href={{ dia.path }}><div class="scroll-page">{{dia.text }}</div></a>
+				{% endfor %}
+	</div></div></div></div>
+<!-- Termina la carta -->
+
+
+<!-- Empiezan la carta -->
+<div class="card" id="carta5">
+  <div class="card-inner">
+    <div class="card-front">
+			<p>5</p>
+    </div>
+    <div class="card-back">
+			<div class="scroll-container">
+				{% for dia in equipo5 %}
+				<a href={{ dia.path }}><div class="scroll-page">{{dia.text }}</div></a>
+				{% endfor %}
+	</div></div></div></div>
+<!-- Termina la carta -->
+
+
+<!-- Empiezan la carta -->
+<div class="card" id="carta6">
+  <div class="card-inner">
+    <div class="card-front">
+			<p>6</p>
+    </div>
+    <div class="card-back">
+			<div class="scroll-container">
+				{% for dia in equipo6 %}
+				<a href={{ dia.path }}><div class="scroll-page">{{dia.text }}</div></a>
+				{% endfor %}
+	</div></div></div></div>
+<!-- Termina la carta -->
+
+
+<!-- Empiezan la carta -->
+<div class="card" id="carta7">
+  <div class="card-inner">
+    <div class="card-front">
+			<p>7</p>
+    </div>
+    <div class="card-back">
+			<div class="scroll-container">
+				{% for dia in equipo7 %}
+				<a href={{ dia.path }}><div class="scroll-page">{{dia.text }}</div></a>
+				{% endfor %}
+	</div></div></div></div>
+<!-- Termina la carta -->
+
+
+
+
+
+
+
+
+
+</div>
+    </main>
+		<script src="./script.js"></script>
+  </body>
+</html>
+
