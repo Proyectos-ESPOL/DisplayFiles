@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ruta Diaria</title>
+<link rel="stylesheet" href="./style3.css">
+<script src="./script.js"></script>
+</head>
+
+<body>
+    <canvas id='bolas'></canvas>
+<p class='texto'>Programación Diaria</p>
+<div class='container'>
+	<div class="map-div">
+<div class='map'>
+	{{ fig }}</div>
+</div>
+
+<a id='start'  class='btn' href='./main.html'>Inicio</a>
+<a id='before' class='btn' href='#'>Día Anterior</a>
+<a id='after'  class='btn' href='#'>Día Siguiente</a>
+
+<div class='datos'>
+    <dl> <dd id="titulo">Información Adicional Sobre la Ruta</dd>
+        <dd><span class='titulos'>Distancia promedio de las:</span> {{distancia}} km.</dd>
+        <dd><span class='titulos'>Duración promedio  de las ruta:</span> {{time}} h.</dd>
+</dl>
+</div>
+</div>
+</body>
+</html>
+
+

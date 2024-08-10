@@ -1,13 +1,81 @@
 /* Configuraciones Generales */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 :root {
-	--azul:#00E1FD;
-	--rojo:#FC007A;
-	--bg:#0a0a0a;
-	--gradiente-static:#ff0000;
-	--gradiente-dynamic: linear-gradient(90deg,#FC007A,#A84BA6,#5496D1,#00E1FD,#5496D1,#A84BA6,#FC007A);}
-body {
-	background-color:var(--bg);
+	--col-1-1:#e20c75;
+	--col-1-2:#0ad3fa;	
+	--col-2-1:#001af5;
+	--col-2-2:#1320ac;
+	--col-3-1:#12f55d;
+	--col-3-2:#1320ac;
+	--col-4-1:#ffe33f;
+	--col-4-2:#f22920;
+	--col-5-1:#fbe240;
+	--col-5-2:#0ffcef;
+	--col-6-1:#3c4487;
+	--col-6-2:#d5539e;
+	--col-7-1:#afe35b;
+	--col-7-2:#1ba797;
+	--col-8-1:#0de7fa;
+	--col-8-2:#1203fa;
+	--col-9-1:#fffbc8;
+	--col-9-2:#ec0958;
+	--col-10-1:#ff026a;
+	--col-10-2:#3d25ed;
+	--col-11-1:#ecb315;
+	--col-11-2:#faa62f;
+	--col-12-1:#5a136e;
+	--col-12-2:#ff009c;
+	--gradiente-1:  linear-gradient(90deg,#e20c75,#c74d97,#0ad3fa,#c74d97,#e20c75);
+    --gradiente-2:  linear-gradient(90deg,#f92edc,#811fee,#001af5,#811fee,#f92edc);
+    --gradiente-3:  linear-gradient(90deg,#12f55d,#079ba5,#1320ac,#079ba5,#12f55d);
+    --gradiente-4:  linear-gradient(90deg,#ffe33f,#ff9933,#f22920,#ff9933,#ffe33f);
+    --gradiente-5:  linear-gradient(90deg,#fbe240,#8ff090,#0ffcef,#8ff090,#fbe240);
+    --gradiente-6:  linear-gradient(90deg,#3c4487,#8935ca,#d5539e,#8935ca,#3c4487);
+    --gradiente-7:  linear-gradient(90deg,#afe35b,#31b68b,#1ba797,#afe35b,#31b68b);
+    --gradiente-8:  linear-gradient(90deg,#0de7fa,#079ba5,#1203fa,#079ba5,#0de7fa);
+    --gradiente-9:  linear-gradient(90deg,#fffbc8,#df3d4d,#ec0958,#df3d4d,#fffbc8);
+    --gradiente-10: linear-gradient(90deg,#ff026a,#ab18a2,#3d25ed,#ab18a2,#ff026a);
+    --gradiente-11: linear-gradient(90deg,#ecb315,#dc3b6f,#faa62f,#dc3b6f,#ecb315);
+    --gradiente-12: linear-gradient(90deg,#5a136e,#a90b84,#ff009c,#a90b84,#5a136e);
+    --bg:#121212;
 }
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;  
+  margin: 10px;
+  overflow: hidden;
+  background: var(--bg);
+  
+}
+
+/* Fondo Bolas */
+
+.container-balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  z-index:-1;
+  position:fixed;
+  width:100%;
+  height:100%;
+  opacity:0.8;
+}
+
+
 
 /* Texto Animado */
 
@@ -18,7 +86,7 @@ p.texto {
 	color:white;
 	font-weight:100px;
 	font-size:30px;
-	top:20px;
+	top:15px;
 }
 
 a.colorful {
@@ -28,7 +96,7 @@ a.colorful {
 }
 
 a.colorful::before {
-  background: hsl(45 100% 70%);
+  background: var(--gradiente-2);
 	color:#000;
   content: "";
   inset: 0;
@@ -48,17 +116,22 @@ a.colorful:hover::before {
 * {
   box-sizing: border-box;
 }
+
+
 .wrapper {
-	position:relative;
-	margin-top:10%;
-  min-width: 100vw;
+ position:fixed;
+  margin-top:8%;
+  width: 100%;
+  max-height:100%
 }
 
 .wrapper {
+
   display: grid;
-	column-gap:10px;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: 1fr;
+  column-gap:20px;
+  row-gap:20px;
+  grid-template-columns:2fr 1fr 1fr 1fr 2fr;
+  grid-template-rows:1fr 1fr 1fr 1fr 1fr 
 }
 
 
@@ -66,8 +139,9 @@ a.colorful:hover::before {
 
 .card {
   width: 100%;
-  height: 60vh;
-  perspective: 1000px;
+  height:150px;
+  display:flex;
+
 }
 
 .card-inner {
@@ -119,7 +193,7 @@ a.colorful:hover::before {
 .card-back {
 border: none;
 outline: none;
-color: rgb(255, 255, 255);
+color: black;
 background: #121212;
 cursor: pointer;
 position: relative;
@@ -130,9 +204,9 @@ user-select: none;
 touch-action: manipulation;}
 .card-back:before {
 content: "";
-background: var(--gradiente-dynamic);/*,#0FFBF9,#0FFBF9);*/
+background: var(--gradiente-11);/*,#0FFBF9,#0FFBF9);*/
 position: absolute;top: -2px;left: -2px;background-size: 400%;z-index: -1;
-filter: blur(5px);-webkit-filter: blur(8px);width: calc(100% + 4px);height: calc(100% + 4px);
+filter: blur(5px);-webkit-filter: blur(2px);width: calc(100% + 4px);height: calc(100% + 4px);
 animation: card-back 10s linear infinite;transition: opacity 0.3s ease-in-out;
 border-radius: 10px;}
 @keyframes card-back {0% {background-position: 0 0;}50% {background-position: 400% 0;}100% {background-position: 0 0;}}
@@ -153,8 +227,6 @@ width: 100%;height: 100%;background: #121212;left: 0;top: 0;border-radius: 10px;
 }
 */
 
-
-
 .scroll-container {
   width: 100%;
   height: 90%;
@@ -163,12 +235,12 @@ width: 100%;height: 100%;background: #121212;left: 0;top: 0;border-radius: 10px;
 }
 .scroll-page {
   position: relative;
-  background: #FFF;
-	max-width:80%;
+  background: var(--bg);
+	max-width:75%;
 	margin-left: auto;
   margin-right: auto;
 	text-align:center;
-	color:black;
+	color:white;
 }
 .scroll-page:hover  {
   opacity: 0.2;
@@ -178,64 +250,64 @@ width: 100%;height: 100%;background: #121212;left: 0;top: 0;border-radius: 10px;
   list-style: none;
   padding: 10px;
   width: 100%;
-  background: #FFF;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s;
 }
 .scroll-page:hover {
   transform: scale(1.1);
   z-index: 5;
-  background: #404040;
+  background: white;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: #000;
   opacity: 1;
 }
 a {
 	text-decoration:none;
 	color:white;
 }
-a:active {
-	transform:scale(1.2)
+.scroll-page:active {
+	transform:scale(1.25)
 }
-.scroll-page:hover span {
-  background: #000;
-  color: #00ff00;
-}
-
 
 
 /* Configuración del grid */
 #carta1 {
-  grid-column: 2 / 4;
+  grid-column: 2 / 3;
   grid-row: 1;
 }
 
 #carta2 {
-  grid-column: 4 / 6;
+  grid-column: 3 / 5;
   grid-row: 1;
 }
 
 #carta3 {
-  grid-column: 6 / 8;
-  grid-row: 1;
+  grid-column: 2 / 4;
+  grid-row: 2;
 }
 
 #carta4 {
-  grid-column: 8 / 10;
-  grid-row: 1;
+  grid-column: 4 / 5;
+  grid-row: 2;
 }
 
 #carta5 {
-  grid-column: 10 / 12;
-  grid-row: 1;
+  grid-column: 2 / 3;
+  grid-row: 3;
 }
 
 #carta6 {
-  grid-column: 12 / 14;
-  grid-row: 1;
+  grid-column: 3 / 5;
+  grid-row: 3;
 }
 
 #carta7 {
-  grid-column: 14 / 16;
-  grid-row: 1;
+  grid-column: 2 / 4;
+  grid-row: 4;
 }
+
+#carta8 {
+  grid-column: 4 / 5;
+  grid-row: 4;
+}
+

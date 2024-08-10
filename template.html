@@ -5,20 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ruta Diaria</title>
 <link rel="stylesheet" href="./style2.css">
+<script src="./script.js"></script>
 </head>
 
 <body>
-<a class='slant' href='#'><span>Programación Diaria</span></a>
+<p class='texto'>Programación Diaria</p>
 <div class='container'>
 	<div class="map-div">
-<div class="map">
-	{{ fig }}
-</div>
+<div class='map'>
+	{{ fig }}</div>
 </div>
 
-<a id='start' class='btn' href='./main.html'><span class='btnspan'>Inicio</span></a>
-<a {{ btn_before }} class='btn'><span class='btnspan'> Día Anterior </span></a>
-<a {{ btn_after }} class='btn'><span class='btnspan'> Día Siguiente </span></a>
+<a id='start'  class='btn' href='./main.html'>Inicio</a>
+<a id='before' class='btn' {{ btn_before }}>Día Anterior</a>
+<a id='after'  class='btn' {{ btn_after }}>Día Siguiente</a>
+
+<div class='datos'>
+    <dl> <dd id="titulo">Información Adicional Sobre la Ruta</dd>
+        <dd><span class='titulos'>Distancia de la ruta:</span> {{distancia}} km.</dd>
+        <dd><span class='titulos'>Duración aproximada de la ruta:</span> {{time}} h.</dd>
+</dl>
+</div>
 </div>
 </body>
 </html>
+
+
